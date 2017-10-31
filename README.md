@@ -4,7 +4,7 @@ This project is part of Udacity's frontend nanodegree. The goal is to create a m
 
 ### Getting started
 
-* Click [here](https://rubarammal.github.io/Neighborhood-Map/) see live Demo. Or clone the project and open `index.html`.
+* Click [here](https://alhadi-essa.github.io/fend-NH-Map/) see live Demo. Or clone the project and open `index.html`.
 * Locations on the map can be filtered using the search field on the sidebar.
 * Clicking a marker on the map opens a window that displays the location's name and information from google map.
 ### Dependencies
