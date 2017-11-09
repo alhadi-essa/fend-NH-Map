@@ -11,26 +11,31 @@
 </head>
 <body>
     <nav class="navbar bg-danger">
-    <h3 id="show-btn">Olaya Dist</h3>
+    <h3 href="#menu-toggle" id="menu-toggle">&equiv; Olaya Dist</h3>
     </nav>
 
     <div id="sid-box">
-    <div>
-    <input id="search_input" data-bind="value: filter, valueUpdate: 'keyup'" placeholder=" Looking for place? ">
-    </div>
-    <div>
-      <ul data-bind="foreach: filteredItems">
-       <li data-bind='text: name'>
+    <div id="sid-box-wrapper">
+    <input id="search_input" data-bind="value: filter, valueUpdate: 'keyup'" placeholder=" Looking for place? "><hr>
+      <ul class="sidebar-nav" data-bind="foreach: filteredItems">
+       <li class="sidebar-brand" data-bind='text: name'>
        </li>
       </ul>
     </div>
+    <div id="map" class="page-content-wrapper"></div>
     </div>
-        <div id="map"></div>
     <script type="text/javascript" src="js/jquery.min.js"></script>
     <script type="text/javascript" src="js/knockout-3.4.2.js"></script>
+    <script type="text/javascript" src="js/bootstrap.bundle.min.js"></script>
     <script type="text/javascript" src="js/apps.js"></script>
     <script async defer
         src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAUjYyqLkSKYzZ9W9Fp7SJmx0A2AamhwF0&v=3&callback=initMap" onerror="mapError()">
+    </script>
+    <script>
+    $("#menu-toggle").click(function(e) {
+        e.preventDefault();
+        $("#sid-box").toggleClass("toggled");
+    });
     </script>
 </body>
 </html>
